@@ -52,17 +52,17 @@ class Ppgw_Checkout {
 	 */
 	public function on_wp_enqueue_scripts() {
 		// Inject standard Paddle checkout JS
-		wp_enqueue_script('paddle-checkout', PPGW_ASSETS_URL . 'js/paddle.js');
+		wp_enqueue_script('paddle-checkout', PPGWC_ASSETS_URL . 'js/paddle.js');
 		
 		// Inject our bootstrap JS to intercept the WC button press and invoke standard JS
-		wp_register_script('paddle-engine', PPGW_ASSETS_URL . 'js/paddle-engine.js', array('jquery'), null);
+		wp_register_script('paddle-engine', PPGWC_ASSETS_URL . 'js/paddle-engine.js', array('jquery'), null);
 				
 		// Use wp_localize_script to write JS config that can't be embedded in the script
 		$endpoint = is_wc_endpoint_url('order-pay') ? 'paddle_checkout_pay' : 'paddle_checkout';
 		$paddle_data = array(
 			'order_url' => $this->get_ajax_endpoint_path($endpoint),
 			'vendor' => $this->settings->get('paddle_vendor_id'),
-			'unable_process_order' => __( "We were unable to process your order, please try again in a few minutes.", 'wc-paddle-payment-gateway' )
+			'unable_process_order' => __( "We were unable to process your order, please try again in a few minutes.", 'paddle-payment-gateway-wc' )
 		);
 
 		wp_localize_script('paddle-engine', 'paddle_data', $paddle_data);
@@ -82,7 +82,7 @@ class Ppgw_Checkout {
 	 */
 	public function on_ajax_process_checkout_pay() {	
 		if (!WC()->session->order_awaiting_payment) {
-			wc_add_notice(__( 'We were unable to process your order, please try again.', 'wc-paddle-payment-gateway' ), 'error');
+			wc_add_notice(__( 'We were unable to process your order, please try again.', 'paddle-payment-gateway-wc' ), 'error');
 			ob_start();
 			wc_print_notices();
 			$messages = ob_get_contents();
@@ -90,7 +90,7 @@ class Ppgw_Checkout {
 			echo json_encode(array(
 				'result' => 'failure',
 				'messages' => $messages,
-				'errors' => array(__( 'We were unable to process your order, please try again.', 'wc-paddle-payment-gateway' ))
+				'errors' => array(__( 'We were unable to process your order, please try again.', 'paddle-payment-gateway-wc' ))
 			));
 			exit;
 		}

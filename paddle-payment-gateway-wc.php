@@ -13,14 +13,14 @@
  *
  * @wordpress-plugin
  * Plugin Name:       Payment Gateway for Paddle on WooCommerce
- * Plugin URI:        https://divdojo.com/wc-paddle-payment-gateway
+ * Plugin URI:        https://divdojo.com/paddle-payment-gateway-wc
  * Description:       Paddle.com Payment Gateway Plugin for WooCommerce
- * Version:           1.0.3
+ * Version:           1.0.0
  * Author:            DivDojo
  * Author URI:        https://divdojo.com
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       wc-paddle-payment-gateway
+ * Text Domain:       paddle-payment-gateway-wc
  * Domain Path:       /languages
  */
 
@@ -34,31 +34,31 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'PPGW_VERSION', '1.0.3' );
+define( 'PPGWC_VERSION', '1.0.0' );
 
 /**
  * Define plugin path and plugin url.
  */
-define( 'PPGW_PATH', plugin_dir_path( __FILE__ ) );
-define( 'PPGW_URL', plugin_dir_url( __FILE__ ) );
-define( 'PPGW_ASSETS_URL', plugin_dir_url( __FILE__ ) . 'assets/dist/' );
+define( 'PPGWC_PATH', plugin_dir_path( __FILE__ ) );
+define( 'PPGWC_URL', plugin_dir_url( __FILE__ ) );
+define( 'PPGWC_ASSETS_URL', plugin_dir_url( __FILE__ ) . 'assets/dist/' );
 
 /**
  * The code that runs during plugin activation.
  */
-function ppgw_activate() {
+function ppgwc_activate() {
 	
 }
 
 /**
  * The code that runs during plugin deactivation.
  */
-function ppgw_deactivate() {
+function ppgwc_deactivate() {
 	
 }
 
-register_activation_hook( __FILE__, 'ppgw_activate' );
-register_deactivation_hook( __FILE__, 'ppgw_deactivate' );
+register_activation_hook( __FILE__, 'ppgwc_activate' );
+register_deactivation_hook( __FILE__, 'ppgwc_deactivate' );
 
 /**
  * The core plugin class that is used to define internationalization,
@@ -75,9 +75,9 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-plugin.php';
  *
  * @since    1.0.0
  */
-function ppgw_run() {
+function ppgwc_run() {
 
 	$plugin = new Ppgw_Plugin();
 
 }
-ppgw_run();
+ppgwc_run();

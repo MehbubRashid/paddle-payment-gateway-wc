@@ -14,4 +14,4 @@ jobs:
       env:
         SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
         SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
-        SLUG: wc-paddle-payment-gateway # optional, remove if GitHub repo name matches SVN slug, including capitalization
+        SLUG: paddle-payment-gateway-wc # optional, remove if GitHub repo name matches SVN slug, including capitalization

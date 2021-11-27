@@ -35,7 +35,7 @@ function css() {
 // Will create a  zip file for plugin which will not contain unnecessary files.
 function compress() {
     return src([ '**/*', '!node_modules/**', '!.github/**', '!.wordpress-org/**', '!./*.json', '!*.gitignore', '!gulpfile.js', '!.git/**' ]) 
-    .pipe(zip('wc-paddle-payment-gateway.zip'))
+    .pipe(zip('paddle-payment-gateway-wc.zip'))
     .pipe(dest('./'));
 }
 

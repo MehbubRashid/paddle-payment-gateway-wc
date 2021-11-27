@@ -1,10 +1,10 @@
-===  Payment Gateway for Paddle on WooCommerce ===
+===  Payment Gateway Paddle on WooCommerce ===
 Contributors: mehbubrashid
 Donate link: https://www.facebook.com/disismehbub
 Tags: paddle,payment gateway,woocommerce
 Requires at least: 4.2
-Tested up to: 5.7
-Stable tag: 1.0.3
+Tested up to: 5.8
+Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -34,19 +34,9 @@ How to use:
 *   Now you should see Paddle.com gateway is working in your checkout page.
 
 Plugin inspired & started from [this repo](https://github.com/hasinhayder/paddle-woocommerce-3)
-Active development and contribute to [this repo](https://github.com/MehbubRashid/wc-paddle-payment-gateway)
+Active development and contribute to [this repo](https://github.com/MehbubRashid/paddle-payment-gateway-wc)
 
 == Changelog ==
-
-= 1.0.3 =
-* Plugin activation error fixed.
-
-= 1.0.2 =
-* Banner fix
-
-= 1.0.1 =
-* Sandbox reconnect helper text added.
-* Better usage tracking.
 
 = 1.0.0 =
 * First release.

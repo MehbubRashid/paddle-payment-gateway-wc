@@ -62,12 +62,12 @@ class Ppgw_Plugin {
 	 * @since    1.0.0
 	 */
 	public function __construct() {
-		if ( defined( 'PPGW_VERSION' ) ) {
-			$this->version = PPGW_VERSION;
+		if ( defined( 'PPGWC_VERSION' ) ) {
+			$this->version = PPGWC_VERSION;
 		} else {
 			$this->version = '1.0.0';
 		}
-		$this->plugin_name = 'wc-paddle-payment-gateway';
+		$this->plugin_name = 'paddle-payment-gateway-wc';
 
 		$this->load_dependencies();
 		$this->set_locale();
@@ -116,7 +116,7 @@ class Ppgw_Plugin {
 	public function load_plugin_textdomain() {
 
 		load_plugin_textdomain(
-			'wc-paddle-payment-gateway',
+			'paddle-payment-gateway-wc',
 			false,
 			dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
 		);
@@ -216,8 +216,8 @@ class Ppgw_Plugin {
 	 * @return void
 	 */
 	public function admin_scripts() {
-		wp_enqueue_style( 'wc-paddle-admin', PPGW_ASSETS_URL . 'css/admin.min.css', array(), null );
-		wp_enqueue_script( 'wc-paddle-admin', PPGW_ASSETS_URL . 'js/admin.min.js', array('jquery'), null, true );
+		wp_enqueue_style( 'wc-paddle-admin', PPGWC_ASSETS_URL . 'css/admin.min.css', array(), null );
+		wp_enqueue_script( 'wc-paddle-admin', PPGWC_ASSETS_URL . 'js/admin.min.js', array('jquery'), null, true );
 	}
 
 }
