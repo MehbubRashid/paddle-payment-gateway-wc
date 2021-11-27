@@ -33,8 +33,7 @@ How to use:
 *   In the next page, enable the gateway, connect it with your Paddle account and finally save.
 *   Now you should see Paddle.com gateway is working in your checkout page.
 
-Plugin inspired & started from [this repo](https://github.com/hasinhayder/paddle-woocommerce-3)
-Active development and contribute to [this repo](https://github.com/MehbubRashid/paddle-payment-gateway-wc)
+Active development and contribute to [Github](https://github.com/MehbubRashid/paddle-payment-gateway-wc)
 
 == Changelog ==
 

@@ -12,7 +12,7 @@
  * @since             1.0.0
  *
  * @wordpress-plugin
- * Plugin Name:       Payment Gateway for Paddle on WooCommerce
+ * Plugin Name:       Payment Gateway Paddle on WooCommerce
  * Plugin URI:        https://divdojo.com/paddle-payment-gateway-wc
  * Description:       Paddle.com Payment Gateway Plugin for WooCommerce
  * Version:           1.0.0
