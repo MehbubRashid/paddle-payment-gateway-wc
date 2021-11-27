@@ -1,4 +1,4 @@
-===  Payment Gateway Paddle on WooCommerce ===
+===  Payment Gateway - Paddle ===
 Contributors: mehbubrashid
 Donate link: https://www.facebook.com/disismehbub
 Tags: paddle,payment gateway,woocommerce
